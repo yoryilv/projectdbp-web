@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://54.161.222.99:8080';
+const API_URL = 'http://3.235.247.255:8080';
 
 export const handleError = (error) => {
     if (error.response) {
@@ -24,7 +24,6 @@ export const login = async (email, password) => {
         handleError(error);
     }
 };
-
 
 export const register = async (name, email, password) => {
     try {

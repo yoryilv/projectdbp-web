@@ -6,16 +6,12 @@ export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('token'));
     const [userId, setUserId] = useState(localStorage.getItem('userId'));
 
-    const login = async (email, password) => {
-        const data = await loginApi(email, password);
-        if (data) {
-            setToken(data.token);
-            setUserId(data.userId);
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('userId', data.userId);
-        }
+    const login = (newToken, newUserId) => {
+        setToken(newToken);
+        setUserId(newUserId);
+        localStorage.setItem('token', newToken);
+        localStorage.setItem('userId', newUserId);
     };
-    
 
     const logout = () => {
         setToken(null);
