@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.css";
+import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 
@@ -24,7 +24,7 @@ const NavBar = () => {
                 ) : (
                     <>
                         <li>
-                            <Link to="/courses">Course</Link>
+                            <Link to="/tasks">Tasks</Link>
                         </li>
                         <li>
                             <button onClick={logout}>Logout</button>
